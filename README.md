@@ -9,17 +9,17 @@ custom UI for qiscus SDK
 
 ## API Quick Start
 
-The table below details the most important classes in Qiscus-UI.
+Table dibawah ini adalah detail class pada Qiscus-UI.
 
 <table>
     <tr><th colspan="2" style="text-align:center;">Controllers</th></tr>
     <tr>
         <td><a href="Code/Controllers/QConversationListViewController.swift">QConversationListViewController</a></td>
-        <td>A controller that provides an editable list of all Conversations for the authenticated user</td>
+        <td>Sebuah tampilan(ViewController) yang menyediakan daftar semua percakapan yang ada berdasarkan pengguna(User) yang telah terdaftar(Login).</td>
     </tr>
     <tr>
         <td><a href="Code/Controllers/QConversationViewController.swift">QConversationViewController</a></td>
-        <td>A controller that provides an editable list of all Conversations for the authenticated user.</td>
+        <td>Sebuah tampilan(ViewController) yang menyediakan daftar pesan di dalam sebuah percakapan.</td>
     </tr>
      <tr><th colspan="2" style="text-align:center;">Protocols</th></tr>
      <tr><th colspan="2" style="text-align:center;">Views</th></tr>
@@ -61,3 +61,56 @@ $ pod install
 ```
 
 These instructions will setup your local CocoaPods environment.
+ 
+## Getting Started
+ 
+1. **Subclass** - Subclass the [QConversationListViewController](Qiscus/Controllers/QConversationListViewController.swift) or [QConversationViewController](Qiscus/Controllers/QConversationViewController.swift)
+2. **Implement** - Both controllers declare delegate and data source protocols. Your subclasses must implement these protocols.
+3. **Customize** - The Atlas leverages the `UIAppearance` protocol to allow for effortless customization of components.
+
+## Login or Register
+### [QClient]()
+Qiscus client is
+
+ 
+## Component Details
+ 
+### [QConversationListViewController](Qiscus/Controllers/QConversationListViewController.swift)
+ 
+The [QConversationListViewController](Qiscus/Controllers/QConversationListViewController.swift) provides a customizable `UITableViewController` subclass for displaying a list of conversations. Conversations are represented by a Conversation label, the latest message content, and the latest message date. The controller handles fetching and ordering conversation based on the latest message date.
+ 
+#### Initialization
+ 
+The [QConversationListViewController](Qiscus/Controllers/QConversationListViewController.swift) is initialized with a QClient object.
+ 
+```swift
+var chatList    = QConversationListViewController()
+chatList.client = qiscusClient
+```
+ 
+#### Customization
+ 
+The [QConversationListViewController](Qiscus/Controllers/QConversationListViewController.swift) displays [QConversationTableViewCell](Qiscus/Views/QConversationTableViewCell.swift). The cells themselves provide for customization via `UIAppearance` selectors.
+ 
+```swift
+
+```
+ 
+### [QConversationViewController](Qiscus/Controllers/QConversationViewController.swift)
+ 
+The [QConversationViewController](Qiscus/Controllers/QConversationViewController.swift) provides a customizable `UICollectionViewController` subclass for displaying individual Layer conversations. The controller is initialized with and `QClient` object and an `QConversation` object. It handles fetching, displaying and sending messages via QiscusKit. The controller leverages the [ATLMessageInputToolbar](Code/Views/ATLMessageInputToolbar.h) object to allow for text and content input.
+ 
+#### Initialization
+ 
+```swift
+
+```
+ 
+#### Customization
+ 
+The [QConversationViewController](Qiscus/Controllers/QConversationViewController.swift) displays both incoming and outgoing flavors of [QMessageCollectionViewCell](Qiscus/Views/QMessageCollectionViewCell.swift). The cells themselves provide for customization via UIAppearance selectors.
+ 
+```swift
+
+```
+ 
