@@ -25,19 +25,17 @@ Table dibawah ini adalah detail class pada Qiscus-UI.
      <tr><th colspan="2" style="text-align:center;">Views</th></tr>
     <tr>
         <td><a href="Code/Views/QMessageInputToolbar.h">QMessageInputToolbar</a></td>
-        <td>A input toolbar that provides a dynamic sizing message input interface.</td>
+        <td>Komponen Input toolbar menampilkan ukuran pesan secara otomatis dan posisi input selalu diatas keyboard.</td>
     </tr>
     <tr>
         <td><a href="Code/Views/QMessageComposeTextView.h">QMessageComposeTextView</a></td>
-        <td>A flexible, expanding text view with support for text, images and location data.</td>
+        <td>Komponen yang menampilkan tipe-tipe pesan, Seperti text, gambar, maupun contact.</td>
     </tr>
 </table>
 
-The complete API documentation can be found on [CocoaDocs](http://cocoadocs.org/docsets/Qiscus/).
-
 ## Installation
 
-Qiscus-UI can be installed directly into your application via CocoaPods. Please note that Qiscus-UI has a direct dependency on QiscusKit that must be satisfied in order to build the components.
+Qiscus-UI dapat di gunakan langsung menggunakan CocoaPods.
 
 #### CocoaPods Installation
 
@@ -98,7 +96,7 @@ The [QConversationListViewController](Qiscus/Controllers/QConversationListViewCo
  
 ### [QConversationViewController](Qiscus/Controllers/QConversationViewController.swift)
  
-The [QConversationViewController](Qiscus/Controllers/QConversationViewController.swift) provides a customizable `UICollectionViewController` subclass for displaying individual Layer conversations. The controller is initialized with and `QClient` object and an `QConversation` object. It handles fetching, displaying and sending messages via QiscusKit. The controller leverages the [ATLMessageInputToolbar](Code/Views/ATLMessageInputToolbar.h) object to allow for text and content input.
+The [QConversationViewController](Qiscus/Controllers/QConversationViewController.swift) provides a customizable `UICollectionViewController` subclass for displaying individual Layer conversations. The controller is initialized with and `QClient` object and an `QConversation` object. It handles fetching, displaying and sending messages via QiscusKit. The controller leverages the [ATLMessageInputToolbar](Code/Views/QMessageInputToolbar.swift) object to allow for text and content input.
  
 #### Initialization
  
@@ -114,3 +112,13 @@ The [QConversationViewController](Qiscus/Controllers/QConversationViewController
 
 ```
  
+
+
+
+## Contributing
+
+QiscusUI is an Open Source project maintained by Qiscus. Feedback and contributions are always welcome and the maintainers try to process patches as quickly as possible. Feel free to open up a Pull Request or Issue on Github.
+
+## Contact
+
+Qiscus was developed in Indonensia by the Qiscus team. If you have any technical questions or concerns please tell us [Qiscus Support](mailto:support@qiscus.com).
