@@ -1,6 +1,0 @@
-framework module Pods_Qiscus_UI {
-  umbrella header "Pods-Qiscus-UI-umbrella.h"
-
-  export *
-  module * { export * }
-}
